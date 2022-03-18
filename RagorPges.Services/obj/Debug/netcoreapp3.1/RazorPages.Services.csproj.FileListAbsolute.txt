@@ -1,0 +1,13 @@
+C:\Users\dpaspalas\source\repos\razorPages\RagorPges.Services\bin\Debug\netcoreapp3.1\RazorPages.Services.deps.json
+C:\Users\dpaspalas\source\repos\razorPages\RagorPges.Services\bin\Debug\netcoreapp3.1\RazorPages.Services.dll
+C:\Users\dpaspalas\source\repos\razorPages\RagorPges.Services\bin\Debug\netcoreapp3.1\RazorPages.Services.pdb
+C:\Users\dpaspalas\source\repos\razorPages\RagorPges.Services\bin\Debug\netcoreapp3.1\RazorPages.Models.dll
+C:\Users\dpaspalas\source\repos\razorPages\RagorPges.Services\bin\Debug\netcoreapp3.1\RazorPages.Models.pdb
+C:\Users\dpaspalas\source\repos\razorPages\RagorPges.Services\obj\Debug\netcoreapp3.1\RazorPages.Services.csproj.AssemblyReference.cache
+C:\Users\dpaspalas\source\repos\razorPages\RagorPges.Services\obj\Debug\netcoreapp3.1\RazorPages.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dpaspalas\source\repos\razorPages\RagorPges.Services\obj\Debug\netcoreapp3.1\RazorPages.Services.AssemblyInfoInputs.cache
+C:\Users\dpaspalas\source\repos\razorPages\RagorPges.Services\obj\Debug\netcoreapp3.1\RazorPages.Services.AssemblyInfo.cs
+C:\Users\dpaspalas\source\repos\razorPages\RagorPges.Services\obj\Debug\netcoreapp3.1\RazorPages.Services.csproj.CoreCompileInputs.cache
+C:\Users\dpaspalas\source\repos\razorPages\RagorPges.Services\obj\Debug\netcoreapp3.1\RazorPages.Services.csproj.CopyComplete
+C:\Users\dpaspalas\source\repos\razorPages\RagorPges.Services\obj\Debug\netcoreapp3.1\RazorPages.Services.dll
+C:\Users\dpaspalas\source\repos\razorPages\RagorPges.Services\obj\Debug\netcoreapp3.1\RazorPages.Services.pdb

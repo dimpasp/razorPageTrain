@@ -1,0 +1,10 @@
+C:\Users\dpaspalas\source\repos\razorPages\RazorPages.Models\bin\Debug\netcoreapp3.1\RazorPages.Models.deps.json
+C:\Users\dpaspalas\source\repos\razorPages\RazorPages.Models\bin\Debug\netcoreapp3.1\RazorPages.Models.dll
+C:\Users\dpaspalas\source\repos\razorPages\RazorPages.Models\bin\Debug\netcoreapp3.1\RazorPages.Models.pdb
+C:\Users\dpaspalas\source\repos\razorPages\RazorPages.Models\obj\Debug\netcoreapp3.1\RazorPages.Models.csproj.AssemblyReference.cache
+C:\Users\dpaspalas\source\repos\razorPages\RazorPages.Models\obj\Debug\netcoreapp3.1\RazorPages.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dpaspalas\source\repos\razorPages\RazorPages.Models\obj\Debug\netcoreapp3.1\RazorPages.Models.AssemblyInfoInputs.cache
+C:\Users\dpaspalas\source\repos\razorPages\RazorPages.Models\obj\Debug\netcoreapp3.1\RazorPages.Models.AssemblyInfo.cs
+C:\Users\dpaspalas\source\repos\razorPages\RazorPages.Models\obj\Debug\netcoreapp3.1\RazorPages.Models.csproj.CoreCompileInputs.cache
+C:\Users\dpaspalas\source\repos\razorPages\RazorPages.Models\obj\Debug\netcoreapp3.1\RazorPages.Models.dll
+C:\Users\dpaspalas\source\repos\razorPages\RazorPages.Models\obj\Debug\netcoreapp3.1\RazorPages.Models.pdb
