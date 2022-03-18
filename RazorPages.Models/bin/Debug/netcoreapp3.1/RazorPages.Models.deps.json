@@ -7,10 +7,14 @@
   "targets": {
     ".NETCoreApp,Version=v3.1": {
       "RazorPages.Models/1.0.0": {
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.0.0"
+        },
         "runtime": {
           "RazorPages.Models.dll": {}
         }
-      }
+      },
+      "System.ComponentModel.Annotations/4.0.0": {}
     }
   },
   "libraries": {
@@ -18,6 +22,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "System.ComponentModel.Annotations/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yZp8iRh91/8lM6F/Jn/fe2Kj9Yrl2viFA4rzbbOMxA1dZOK7vBfOQRxLr0nRatjHf5LtE181IOW9AFd5OdTT5Q==",
+      "path": "system.componentmodel.annotations/4.0.0",
+      "hashPath": "system.componentmodel.annotations.4.0.0.nupkg.sha512"
     }
   }
 }

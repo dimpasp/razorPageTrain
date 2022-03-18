@@ -1,8 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "RcoXwMfz4ZktA3LuoZ0YDBVsHCaDSUKl1I69hCjyJDwyp92j2h6HacRC2oAsOUnb/V14+O0BxAHh5xOOYD6AhA==",
+  "dgSpecHash": "UIQAwg3IChuK9shc5q4oOKazZWGuw+6+rUlK3ucw5daqn5pVTgPrwdKZdfNIFMQHAd+lyFK1hF/DYpr+8sPRww==",
   "success": true,
   "projectFilePath": "C:\\Users\\dpaspalas\\source\\repos\\razorPages\\RagorPges.Services\\RazorPages.Services.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "expectedPackageFiles": [
+    "C:\\Users\\dpaspalas\\.nuget\\packages\\system.componentmodel.annotations\\4.0.0\\system.componentmodel.annotations.4.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.ComponentModel.Annotations 4.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "System.ComponentModel.Annotations",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

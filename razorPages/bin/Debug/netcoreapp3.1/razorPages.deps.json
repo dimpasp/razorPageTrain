@@ -169,7 +169,7 @@
           "System.Collections.Immutable": "1.2.5.0",
           "System.Collections.NonGeneric": "4.1.2.0",
           "System.Collections.Specialized": "4.1.2.0",
-          "System.ComponentModel.Annotations": "4.3.1.0",
+          "System.ComponentModel.Annotations.Reference": "4.3.1.0",
           "System.ComponentModel.DataAnnotations": "4.0.0.0",
           "System.ComponentModel": "4.0.4.0",
           "System.ComponentModel.EventBasedAsync": "4.1.2.0",
@@ -323,7 +323,11 @@
           "razorPages.dll": {}
         }
       },
+      "System.ComponentModel.Annotations/4.0.0": {},
       "RazorPages.Models/1.0.0": {
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.0.0"
+        },
         "runtime": {
           "RazorPages.Models.dll": {}
         },
@@ -1158,7 +1162,7 @@
         },
         "compileOnly": true
       },
-      "System.ComponentModel.Annotations/4.3.1.0": {
+      "System.ComponentModel.Annotations.Reference/4.3.1.0": {
         "compile": {
           "System.ComponentModel.Annotations.dll": {}
         },
@@ -2042,6 +2046,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "System.ComponentModel.Annotations/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yZp8iRh91/8lM6F/Jn/fe2Kj9Yrl2viFA4rzbbOMxA1dZOK7vBfOQRxLr0nRatjHf5LtE181IOW9AFd5OdTT5Q==",
+      "path": "system.componentmodel.annotations/4.0.0",
+      "hashPath": "system.componentmodel.annotations.4.0.0.nupkg.sha512"
+    },
     "RazorPages.Models/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -2732,7 +2743,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.ComponentModel.Annotations/4.3.1.0": {
+    "System.ComponentModel.Annotations.Reference/4.3.1.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

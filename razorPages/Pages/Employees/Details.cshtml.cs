@@ -9,6 +9,8 @@ namespace razorPages.Pages.Employees
     {
         private readonly IEmployeeRepository _employeeRepository;
         public Employee Employee { get; private set; }
+        [BindProperty(SupportsGet =true)]
+        public string Message { get; set; }
         public DetailsModel(IEmployeeRepository employeeRepository)
         {
             this._employeeRepository = employeeRepository;
@@ -21,6 +23,6 @@ namespace razorPages.Pages.Employees
                 return RedirectToPage("/NotFound");
             }
             return Page();
-        }
+         }
     } 
 }

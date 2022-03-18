@@ -19,8 +19,15 @@ using razorPages;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\dpaspalas\source\repos\razorPages\razorPages\Pages\_ViewImports.cshtml"
+using RazorPages.Models;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d61cc8f4f7a102bdaa3df1ff8e10eb393edd7ff2", @"/Pages/NotFound.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ddc664ce03c53d10de85216eaafe703029f84669", @"/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d9ca382d89171ed945b27cf3ae8bf3d253b15686", @"/Pages/_ViewImports.cshtml")]
     #nullable restore
     public class Pages_NotFound : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     #nullable disable
@@ -60,7 +67,7 @@ using razorPages;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n<h1>The resource you are looking for cannot be found</h1>\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d61cc8f4f7a102bdaa3df1ff8e10eb393edd7ff23842", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d61cc8f4f7a102bdaa3df1ff8e10eb393edd7ff24028", async() => {
                 WriteLiteral("\r\n    Click here to go back to Home\r\n");
             }
             );

@@ -19,8 +19,15 @@ using razorPages;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\dpaspalas\source\repos\razorPages\razorPages\Pages\_ViewImports.cshtml"
+using RazorPages.Models;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1f02565c188bc0cf60de1bc120acef71a3608055", @"/Pages/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ddc664ce03c53d10de85216eaafe703029f84669", @"/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d9ca382d89171ed945b27cf3ae8bf3d253b15686", @"/Pages/_ViewImports.cshtml")]
     #nullable restore
     public class Pages_Error : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     #nullable disable

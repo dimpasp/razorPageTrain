@@ -22,9 +22,18 @@ namespace RazorPages.Services
                 new Employee() { Id = 3, Name = "Sara", Department = Dept.IT,
                     Email = "sara@pragimtech.com", PhotoPath="sara.png" },
                 new Employee() { Id = 4, Name = "David", Department = Dept.Payroll,
-                    Email = "david@pragimtech.com", PhotoPath="sara.png" },
+                    Email = "david@pragimtech.com"},
             };
         }
+
+        public Employee Add(Employee newEmployee)
+        {
+            //i will do it in auto mode,now just for test
+           newEmployee.Id=_employeeList.Max(x => x.Id)+1;
+            _employeeList.Add(newEmployee);
+            return newEmployee;
+        }
+
         public IEnumerable<Employee> GetAllEmployees()
         {
             return _employeeList;
@@ -33,6 +42,19 @@ namespace RazorPages.Services
         public Employee GetEmployee(int id)
         {
             return _employeeList.FirstOrDefault(l => l.Id == id);
+        }
+
+        public Employee Update(Employee updatedEmployee)
+        {
+            Employee employee=_employeeList.FirstOrDefault(x=>x.Id == updatedEmployee.Id);    
+            if (employee != null)
+            {
+                employee.Name = updatedEmployee.Name;   
+                employee.Department = updatedEmployee.Department;
+                employee.Email = updatedEmployee.Email; 
+                employee.PhotoPath = updatedEmployee.PhotoPath;
+            }
+            return employee;
         }
     }
 }

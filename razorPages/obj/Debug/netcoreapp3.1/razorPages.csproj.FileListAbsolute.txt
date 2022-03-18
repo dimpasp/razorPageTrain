@@ -41,3 +41,4 @@ C:\Users\dpaspalas\source\repos\razorPages\razorPages\bin\Debug\netcoreapp3.1\Ra
 C:\Users\dpaspalas\source\repos\razorPages\razorPages\bin\Debug\netcoreapp3.1\RazorPages.Models.pdb
 C:\Users\dpaspalas\source\repos\razorPages\razorPages\obj\Debug\netcoreapp3.1\Razor\Pages\Employees\Details.cshtml.g.cs
 C:\Users\dpaspalas\source\repos\razorPages\razorPages\obj\Debug\netcoreapp3.1\Razor\Pages\NotFound.cshtml.g.cs
+C:\Users\dpaspalas\source\repos\razorPages\razorPages\obj\Debug\netcoreapp3.1\Razor\Pages\Employees\Edit.cshtml.g.cs
