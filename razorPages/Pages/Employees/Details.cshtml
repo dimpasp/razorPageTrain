@@ -14,7 +14,7 @@
     var photopath = "~/images/" + (Model.Employee.PhotoPath ?? "noImage.png");
 }
 <div class="row justify-content-center m-3">
-    @if (TempData["message"]!= null)
+    @if (TempData["message"] != null)
     {
         <div class="col-sm-8">
             <div class="alert alert-primary">
@@ -43,5 +43,8 @@
                 <a href="#" class="btn btn-danger">Delete</a>
             </div>
         </div>
+    </div>
+    <div class="col-sm-8">
+        @await Component.InvokeAsync("HeadCount", new{department = Model.Employee.Department})
     </div>
 </div>

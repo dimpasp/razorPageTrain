@@ -9,15 +9,20 @@ namespace razorPages.Pages.Employees
 {
     public class IndexModel : PageModel
     {
+        [BindProperty(SupportsGet = true)]
+        public string SearchTerm { get; set; }
+
         private readonly IEmployeeRepository _employeeRepository;
+
         public IEnumerable<Employee> Employees { get; set; }
+
         public IndexModel(IEmployeeRepository employeeRepository)
         {
             this._employeeRepository = employeeRepository;
         }
         public void OnGet()
         {
-            Employees=_employeeRepository.GetAllEmployees();
+            Employees=_employeeRepository.Search(SearchTerm);
         }
     }
 }

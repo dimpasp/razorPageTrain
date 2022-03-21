@@ -44,9 +44,37 @@ namespace RazorPages.Services
             return employeeToDelete;
         }
 
+        public IEnumerable<DeptHeadCount> EmployeeCountByDept(Dept? dept)
+        {
+            IEnumerable<Employee> query = _employeeList;
+
+            if (dept.HasValue)
+            {
+                query = query.Where(e => e.Department == dept.Value);
+            }
+            //this is LINQ 
+            return query.GroupBy(e => e.Department)
+                .Select(x => new DeptHeadCount()
+                {
+                    Department = x.Key.Value,
+                    Count = x.Count()
+                }).ToList();
+        }
+
         public IEnumerable<Employee> GetAllEmployees()
         {
             return _employeeList;
+        }
+        public IEnumerable<Employee> Search(string searchTerm = null)
+        {
+            if (string.IsNullOrEmpty(searchTerm))
+            {
+                return _employeeList;
+            }
+
+            //στο search ψαχνουμε είτε το ονομα είτε το email
+            return _employeeList.Where(e => e.Name.Contains(searchTerm) ||
+                                            e.Email.Contains(searchTerm)).ToList();
         }
 
         public Employee GetEmployee(int id)

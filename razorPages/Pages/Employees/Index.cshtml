@@ -4,11 +4,11 @@
 @*b τροποσ να ζηταμε οποιοδηποτε ονομα στο route.Δηλαδη employees/123*@
 @*@page "{name}"*@
 
-@page 
+@page
 @model razorPages.Pages.Employees.IndexModel
 @{
     ViewData["Title"] = "Index";
-     // Pass true using ViewData to tell the partial view
+    // Pass true using ViewData to tell the partial view
     // to display View, Edit and Delete buttons
     ViewData["ShowButtons"] = true;
 }
@@ -17,31 +17,41 @@
 <style>
     .btn {
         width: 75px;
-    } 
+    }
 </style>
 
-
 <h1>Employees</h1>
-
+@*search page*@
+<form method="get">
+    <div class="input-group">
+        <input class="form-control" asp-for="SearchTerm">
+        <div class="input-group-append">
+            <button class="btn btn-primary" type="submit">Search</button>
+        </div>
+    </div>
+</form>
 <div class="card-deck">
     @foreach (var employee in Model.Employees)
     {
-       <partial name="_DisplayEmployeePartial" model="employee" view-data="ViewData" />
-     @*   var photopath = "~/images/" + (employee.PhotoPath ?? "noImage.png");
-        <div class="card m-3" style="min-width: 18rem; max-width:30.5%;">
+        <partial name="_DisplayEmployeePartial" model="employee" view-data="ViewData" />
+        @*   var photopath = "~/images/" + (employee.PhotoPath ?? "noImage.png");
+            <div class="card m-3" style="min-width: 18rem; max-width:30.5%;">
             <div class="card-header">
-                <h3>@employee.Name</h3>
+            <h3>@employee.Name</h3>
             </div>
 
             <img class="card-img-top imageThumbnail" src="@photopath"
-                 asp-append-version="true" />
+            asp-append-version="true" />
 
             <div class="card-footer text-center">
-                //asp-route- =>ετσι περναω το id ή οτι αλλο θελω στο url
-                <a asp-page="/Employees/Details" asp-route-ID="@employee.Id" class="btn btn-primary m-1">View</a>
-                <a asp-page="/Employees/Edit" asp-route-ID="@employee.Id" class="btn btn-primary m-1">Edit</a>
-                <a asp-page="/Employees/Delete" asp-route-ID="@employee.Id" class="btn btn-danger m-1">Delete</a>
+            //asp-route- =>ετσι περναω το id ή οτι αλλο θελω στο url
+            <a asp-page="/Employees/Details" asp-route-ID="@employee.Id" class="btn btn-primary m-1">View</a>
+            <a asp-page="/Employees/Edit" asp-route-ID="@employee.Id" class="btn btn-primary m-1">Edit</a>
+            <a asp-page="/Employees/Delete" asp-route-ID="@employee.Id" class="btn btn-danger m-1">Delete</a>
             </div>
-        </div>*@
+            </div>*@
     }
+</div>
+<div class="col-sm-8">
+    @await Component.InvokeAsync("HeadCount")
 </div>
