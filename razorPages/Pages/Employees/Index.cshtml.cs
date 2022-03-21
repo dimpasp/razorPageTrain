@@ -9,6 +9,7 @@ namespace razorPages.Pages.Employees
 {
     public class IndexModel : PageModel
     {
+        //BindProperty default είναι για post,οποτε πρεπει να θέσω το SupportGet = true
         [BindProperty(SupportsGet = true)]
         public string SearchTerm { get; set; }
 
