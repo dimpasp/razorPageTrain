@@ -43,3 +43,4 @@ C:\Users\dpaspalas\source\repos\razorPages\razorPages\obj\Debug\netcoreapp3.1\Ra
 C:\Users\dpaspalas\source\repos\razorPages\razorPages\obj\Debug\netcoreapp3.1\Razor\Pages\NotFound.cshtml.g.cs
 C:\Users\dpaspalas\source\repos\razorPages\razorPages\obj\Debug\netcoreapp3.1\Razor\Pages\Employees\Edit.cshtml.g.cs
 C:\Users\dpaspalas\source\repos\razorPages\razorPages\obj\Debug\netcoreapp3.1\Razor\Pages\Employees\Delete.cshtml.g.cs
+C:\Users\dpaspalas\source\repos\razorPages\razorPages\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_DisplayEmployeePartial.cshtml.g.cs
