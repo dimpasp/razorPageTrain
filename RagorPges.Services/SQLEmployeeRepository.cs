@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using RazorPages.Models;
 using System;
 using System.Collections.Generic;
@@ -57,6 +58,13 @@ namespace RazorPages.Services
         public Employee GetEmployee(int id)
         {
             return context.Set<Employee>().SingleOrDefault(s => s.Id == id);
+
+            ////αν θελω να χρησιμοποιησω stored procedure
+            //SqlParameter parameter = new SqlParameter("@Id", id);
+            //return context.Employee
+            //        .FromSqlRaw<Employee>("spGetEmployeeById @Id", parameter)
+            //        .ToList()
+            //        .FirstOrDefault();
         }
 
         public IEnumerable<Employee> Search(string searchTerm)
