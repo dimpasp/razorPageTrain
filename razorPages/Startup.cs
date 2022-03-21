@@ -31,7 +31,7 @@ namespace razorPages
                 options.UseSqlServer(Configuration.GetConnectionString("MyDBConnection"));
             });
             services.AddRazorPages();
-            services.AddSingleton<IEmployeeRepository, MockEmployeeRepository>();
+            services.AddScoped<IEmployeeRepository, SQLEmployeeRepository>();
             services.Configure<RouteOptions>(options => 
             {
                 // αυτα για να ειναι ολα lower case στο url
