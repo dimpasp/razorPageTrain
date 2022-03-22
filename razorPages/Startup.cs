@@ -26,12 +26,20 @@ namespace razorPages
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //MyCookieAuth => πρεπει να ειναι παντου το ιδιο,και στο controller 
+            services.AddAuthentication("MyCookieAuth").AddCookie("MyCookieAuth", options =>
+             {
+                 options.Cookie.Name = "MyCookieAuth";
+                 options.LoginPath = "/acount/Login";
+             });
+
             services.AddDbContextPool<AppDbContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("MyDBConnection"));
             });
             services.AddRazorPages();
             services.AddScoped<IEmployeeRepository, SQLEmployeeRepository>();
+            services.AddScoped<ICredentialRepository, SQLCredentialRepository>();
             services.Configure<RouteOptions>(options => 
             {
                 // αυτα για να ειναι ολα lower case στο url
@@ -64,6 +72,7 @@ namespace razorPages
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

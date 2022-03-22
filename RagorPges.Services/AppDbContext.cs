@@ -14,5 +14,6 @@ namespace RazorPages.Services
 
         }
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<Credential> Credentials { get; set; }
     }
 }

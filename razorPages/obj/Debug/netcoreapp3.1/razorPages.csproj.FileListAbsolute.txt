@@ -87,3 +87,6 @@ C:\Users\dpaspalas\source\repos\razorPages\razorPages\bin\Debug\netcoreapp3.1\ru
 C:\Users\dpaspalas\source\repos\razorPages\razorPages\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\dpaspalas\source\repos\razorPages\razorPages\bin\Debug\netcoreapp3.1\Humanizer.dll
 C:\Users\dpaspalas\source\repos\razorPages\razorPages\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\dpaspalas\source\repos\razorPages\razorPages\obj\Debug\netcoreapp3.1\Razor\Pages\Acount\Login.cshtml.g.cs
+C:\Users\dpaspalas\source\repos\razorPages\razorPages\obj\Debug\netcoreapp3.1\Razor\Pages\Acount\Logout.cshtml.g.cs
+C:\Users\dpaspalas\source\repos\razorPages\razorPages\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_LoginStatus.cshtml.g.cs
