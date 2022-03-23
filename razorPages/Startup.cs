@@ -40,6 +40,7 @@ namespace razorPages
             services.AddRazorPages();
             services.AddScoped<IEmployeeRepository, SQLEmployeeRepository>();
             services.AddScoped<ICredentialRepository, SQLCredentialRepository>();
+            services.AddScoped<IProjectRepository, ProjectRepository>();
             services.Configure<RouteOptions>(options => 
             {
                 // αυτα για να ειναι ολα lower case στο url
