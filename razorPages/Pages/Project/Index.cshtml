@@ -1,0 +1,29 @@
+﻿@page
+@model razorPages.Pages.Project.IndexModel
+@{
+    ViewData["Title"] = "Index";
+    ViewData["ShowButtons"] = true;
+}
+
+<style>
+    .btn {
+        width: 75px;
+    }
+</style>
+
+<h1>Projects</h1>
+@*search page*@
+<form method="get">
+    <div class="input-group">
+        <input class="form-control" asp-for="SearchTerm">
+        <div class="input-group-append">
+            <button class="btn btn-primary" type="submit">Search</button>
+        </div>
+    </div>
+</form>
+<div class="card-deck">
+    @foreach (var project in Model.Projects)
+    {
+        <partial name="_DisplayProjectPartial" model="project" view-data="ViewData" />
+    }
+</div>

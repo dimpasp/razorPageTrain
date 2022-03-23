@@ -1,0 +1,30 @@
+﻿@page "/project/view/{id:int:min(1)}"
+@model razorPages.Pages.Project.DetailsModel
+@{
+    ViewData["Title"] = "Details";
+    var photopath = "~/images/" + (Model.project.PhotoPath ?? "noImage.png");
+}
+<div class="row justify-content-center m-3">
+    <div class="col-sm-8">
+        <div class="card">
+            <div class="card-header">
+                <h1>@Model.project.Tittle</h1>
+            </div>
+
+            <div class="card-body text-center">
+                <img class="card-img-top" src="@photopath" asp-append-version="true" />
+
+                <h4>Project ID : @Model.project.id</h4>
+                <h4>Email : @Model.project.Description</h4>
+                <h4>Department : @Model.project.Department</h4>
+                <h4>Date Created : @Model.project.DateCreated</h4>
+
+            </div>
+            <div class="card-footer text-center">
+                <a asp-page="index" class="btn btn-primary">Back</a>
+                <a asp-page="/Employees/Edit" asp-route-ID="@Model.project.id" class="btn btn-primary m-1">Edit</a>
+                <a asp-page="/Employees/Delete" asp-route-ID="@Model.project.id" class="btn btn-danger m-1">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>

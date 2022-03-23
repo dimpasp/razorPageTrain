@@ -90,3 +90,8 @@ C:\Users\dpaspalas\source\repos\razorPages\razorPages\bin\Debug\netcoreapp3.1\Mi
 C:\Users\dpaspalas\source\repos\razorPages\razorPages\obj\Debug\netcoreapp3.1\Razor\Pages\Acount\Login.cshtml.g.cs
 C:\Users\dpaspalas\source\repos\razorPages\razorPages\obj\Debug\netcoreapp3.1\Razor\Pages\Acount\Logout.cshtml.g.cs
 C:\Users\dpaspalas\source\repos\razorPages\razorPages\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_LoginStatus.cshtml.g.cs
+C:\Users\dpaspalas\source\repos\razorPages\razorPages\obj\Debug\netcoreapp3.1\Razor\Pages\Project\Delete.cshtml.g.cs
+C:\Users\dpaspalas\source\repos\razorPages\razorPages\obj\Debug\netcoreapp3.1\Razor\Pages\Project\Details.cshtml.g.cs
+C:\Users\dpaspalas\source\repos\razorPages\razorPages\obj\Debug\netcoreapp3.1\Razor\Pages\Project\Edit.cshtml.g.cs
+C:\Users\dpaspalas\source\repos\razorPages\razorPages\obj\Debug\netcoreapp3.1\Razor\Pages\Project\Index.cshtml.g.cs
+C:\Users\dpaspalas\source\repos\razorPages\razorPages\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_DisplayProjectPartial.cshtml.g.cs
