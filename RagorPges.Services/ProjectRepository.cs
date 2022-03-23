@@ -18,6 +18,21 @@ namespace RazorPages.Services
 
         public async Task<Project> AddAsync(Project newProject)
         {
+            try
+            {
+                var employeeName = context
+                                .Set<Employee>()
+                                .Where(p => p.Id == Convert.ToInt32(newProject.EmployeeName))
+                                .Select(p => p.Name)
+                                .FirstOrDefault();
+
+                newProject.EmployeeName = employeeName;
+            }
+            catch (Exception)
+            {
+
+
+            }
             context.Projects.Add(newProject);
             await context.SaveChangesAsync();
             return newProject;
@@ -59,6 +74,19 @@ namespace RazorPages.Services
 
         public async Task<Project> UpdateAsync(Project updatedProject)
         {
+            try
+            {
+                var employeeName = context
+                                .Set<Employee>()
+                                .Where(p => p.Id == Convert.ToInt32(updatedProject.EmployeeName))
+                                .Select(p => p.Name)
+                                .FirstOrDefault();
+
+                updatedProject.EmployeeName = employeeName;
+            }
+            catch (Exception)
+            {
+            }
             var project = context.Projects.Attach(updatedProject);
             project.State = EntityState.Modified;
             await context.SaveChangesAsync();

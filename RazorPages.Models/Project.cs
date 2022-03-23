@@ -34,6 +34,13 @@ namespace RazorPages.Models
         /// </summary>
         [Required]
         public Dept? Department { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string EmployeeName { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
         public Project()
         {
             DateCreated = DateTime.Today;

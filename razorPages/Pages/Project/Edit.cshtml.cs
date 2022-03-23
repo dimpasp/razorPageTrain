@@ -2,8 +2,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
+using RazorPages.Models;
 using RazorPages.Services;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 
@@ -11,19 +14,23 @@ namespace razorPages.Pages.Project
 {
     public class EditModel : PageModel
     {
+        private readonly AppDbContext context;
         private readonly IProjectRepository _projectepository;
         private readonly IWebHostEnvironment webHostEnvironment;
         [BindProperty]
         public RazorPages.Models.Project Project { get; set; }
         [BindProperty]
         public IFormFile Photo { get; set; }
-        public EditModel(IProjectRepository projectepository, IWebHostEnvironment webHostEnvironment)
+        public IEnumerable<Employee> displayEmployees { get; set; }
+        public EditModel(IProjectRepository projectepository, IWebHostEnvironment webHostEnvironment, AppDbContext context)
         {
             this._projectepository = projectepository;
             this.webHostEnvironment = webHostEnvironment;
+            this.context = context;
         }
         public async Task<IActionResult> OnGet(int? id)
         {
+            displayEmployees = await context.Employees.ToListAsync();
             if (id.HasValue)
             {
                 Project = await _projectepository.getProjectByIdAsync(id.Value);

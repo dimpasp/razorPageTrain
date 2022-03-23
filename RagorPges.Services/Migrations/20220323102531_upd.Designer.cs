@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RazorPages.Services;
 
 namespace RazorPages.Services.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220323102531_upd")]
+    partial class upd
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -84,8 +86,8 @@ namespace RazorPages.Services.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("EmployeeName")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("EmployeeId")
+                        .HasColumnType("int");
 
                     b.Property<string>("PhotoPath")
                         .HasColumnType("nvarchar(max)");
@@ -96,7 +98,18 @@ namespace RazorPages.Services.Migrations
 
                     b.HasKey("id");
 
+                    b.HasIndex("EmployeeId");
+
                     b.ToTable("Projects");
+                });
+
+            modelBuilder.Entity("RazorPages.Models.Project", b =>
+                {
+                    b.HasOne("RazorPages.Models.Employee", "Employee")
+                        .WithMany()
+                        .HasForeignKey("EmployeeId");
+
+                    b.Navigation("Employee");
                 });
 #pragma warning restore 612, 618
         }
