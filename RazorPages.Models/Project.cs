@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace RazorPages.Models
@@ -37,6 +38,12 @@ namespace RazorPages.Models
         /// <summary>
         /// 
         /// </summary>
+        [Required]
+        public int EmployeeId { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        [ForeignKey("EmployeeId")]
         public string EmployeeName { get; set; }
         /// <summary>
         /// 

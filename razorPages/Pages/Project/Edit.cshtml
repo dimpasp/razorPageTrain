@@ -40,13 +40,22 @@
              <span asp-validation-for="Project.Department" class="text-danger"></span>
         </div>
     </div>
-     <div class="form-group row">
+    @* <div class="form-group row">
         <label asp-for="Project.EmployeeName" class="col-sm-2 col-form-label"></label>
         <div class="col-sm-10">
-            @*εδω και στον controller περνω δεδομενα για αλλο class απο την βαση*@
+            εδω και στον controller περνω δεδομενα για αλλο class απο την βαση
             <select asp-for="Project.EmployeeName" class="custom-select mr-sm-2"asp-items="@(new SelectList(Model.displayEmployees,"Id","Name"))">
                 <option value="">Please Select</option>
             </select>
+        </div>
+    </div>*@
+       <div class="form-group row">
+        <label asp-for="Project.EmployeeId" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <select asp-for="Project.EmployeeId" class="custom-select mr-sm-2"asp-items="ViewBag.EmployeeId">
+                <option value="">Please Select</option>
+            </select>
+             <span asp-validation-for="Project.EmployeeId" class="text-danger"></span>
         </div>
     </div>
     <div class="form-group row">

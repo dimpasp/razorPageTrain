@@ -2,12 +2,14 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using RazorPages.Models;
 using RazorPages.Services;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace razorPages.Pages.Project
@@ -21,7 +23,7 @@ namespace razorPages.Pages.Project
         public RazorPages.Models.Project Project { get; set; }
         [BindProperty]
         public IFormFile Photo { get; set; }
-        public IEnumerable<Employee> displayEmployees { get; set; }
+        //public IEnumerable<Employee> displayEmployees { get; set; }
         public EditModel(IProjectRepository projectepository, IWebHostEnvironment webHostEnvironment, AppDbContext context)
         {
             this._projectepository = projectepository;
@@ -30,7 +32,7 @@ namespace razorPages.Pages.Project
         }
         public async Task<IActionResult> OnGet(int? id)
         {
-            displayEmployees = await context.Employees.ToListAsync();
+            //displayEmployees = await context.Employees.ToListAsync();
             if (id.HasValue)
             {
                 Project = await _projectepository.getProjectByIdAsync(id.Value);
@@ -39,6 +41,7 @@ namespace razorPages.Pages.Project
             {
                 Project = new RazorPages.Models.Project();
             }
+            ViewData["EmployeeId"] = new SelectList(context.Employees.ToList(), "Id", "Name");
             if (Project == null) return RedirectToPage("/NotFound");
             return Page();
         }
@@ -55,6 +58,7 @@ namespace razorPages.Pages.Project
                     }
                     project.PhotoPath = ProcessUploadedFile();
                 }
+                ViewData["EmployeeId"] = new SelectList(context.Employees.ToList(), "Id", "Name");
                 if (project.id != 0) await _projectepository.UpdateAsync(project);
                 else await _projectepository.AddAsync(project);
                 return RedirectToPage("Index");

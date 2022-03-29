@@ -20,18 +20,13 @@ namespace RazorPages.Services
         {
             try
             {
-                var employeeName = context
-                                .Set<Employee>()
-                                .Where(p => p.Id == Convert.ToInt32(newProject.EmployeeName))
-                                .Select(p => p.Name)
-                                .FirstOrDefault();
+                var employeeName = context.Employees.Where(p => p.Id == newProject.EmployeeId)
+                                .Select(p => p.Name).FirstOrDefault();
 
                 newProject.EmployeeName = employeeName;
             }
             catch (Exception)
             {
-
-
             }
             context.Projects.Add(newProject);
             await context.SaveChangesAsync();
@@ -51,7 +46,7 @@ namespace RazorPages.Services
         public async Task<Project> getProjectByIdAsync(int projectId)
         {
             var project = context
-               .Set<Project>()
+               .Projects
                .Where(p => p.id == projectId)
                .AsQueryable();
 
@@ -76,12 +71,8 @@ namespace RazorPages.Services
         {
             try
             {
-                var employeeName = context
-                                .Set<Employee>()
-                                .Where(p => p.Id == Convert.ToInt32(updatedProject.EmployeeName))
-                                .Select(p => p.Name)
-                                .FirstOrDefault();
-
+                var employeeName = context.Employees.Where(p => p.Id == updatedProject.EmployeeId)
+                                .Select(p => p.Name).FirstOrDefault();
                 updatedProject.EmployeeName = employeeName;
             }
             catch (Exception)
